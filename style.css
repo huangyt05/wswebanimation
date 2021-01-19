@@ -1,0 +1,58 @@
+main{
+    margin: 0 auto;
+    padding: 2rem;
+    width:80vw;
+    height: 80vh;
+    text-align: center;
+}
+#box{
+    stroke-dasharray: 200;
+    animation: dash 5s cubic-bezier(.455,.03,.515,.955)infinite alternate;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: dash;
+}
+
+#circle{
+    float: right;
+    stroke-width: 20;
+    animation: wide 5s cubic-bezier(.455,.03,.515,.955)infinite alternate;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: wide;
+}
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 3000;
+    }
+}
+@keyframes wide {
+    0% {
+        stroke-width: 20;
+    }
+    100% {
+        stroke-width: 55;
+    }
+}
+
+.text{
+    font-family: sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+}
+.text:hover{
+    transform: translate(0,-100px)
+}
